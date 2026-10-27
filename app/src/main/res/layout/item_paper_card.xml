@@ -6,18 +6,19 @@
     style="@style/Studdy.Card.Flat"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
+    android:layout_marginBottom="@dimen/space_md"
     android:clickable="true"
     android:focusable="true"
-    app:strokeColor="@color/stroke_light"
-    app:strokeWidth="1dp">
+    app:cardBackgroundColor="?attr/colorSurface"
+    app:strokeColor="?attr/colorOutline"
+    app:strokeWidth="@dimen/divider_height">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="@dimen/card_padding">
 
         <!-- Info container -->
         <LinearLayout
@@ -30,35 +31,32 @@
                 android:id="@+id/tv_paper_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:textColor="@color/text_primary"
-                android:textSize="16sp"
+                android:textAppearance="@style/Studdy.TextAppearance.TitleSmall"
+                android:textColor="?attr/colorOnSurface"
                 tools:text="Final Physics Exam Paper" />
 
             <TextView
                 android:id="@+id/tv_paper_subtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:textColor="@color/text_secondary"
-                android:textSize="12sp"
+                android:layout_marginTop="@dimen/space_xs"
+                android:textAppearance="@style/Studdy.TextAppearance.Caption"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 tools:text="Marks: 100 • MCQ &amp; Short • Medium" />
 
             <TextView
                 android:id="@+id/tv_paper_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/space_sm"
+                android:textAppearance="@style/Studdy.TextAppearance.Caption"
                 android:textColor="@color/text_hint"
-                android:textSize="11sp"
                 tools:text="Created: July 4, 2026" />
         </LinearLayout>
 
             <ImageButton
                 android:id="@+id/btn_delete_paper"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
+                style="@style/Studdy.IconButton"
                 android:contentDescription="@string/delete"
                 android:src="@drawable/ic_delete"
                 app:tint="@color/color_error" />
