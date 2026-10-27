@@ -8,6 +8,7 @@
     <color name="brand_primary_light">#9FA8DA</color>
     <color name="brand_primary_surface">#F0EBFF</color>
     <color name="brand_primary_light_purple">#F2E7FF</color>
+    <color name="brand_primary_soft">#F0F2FF</color>
 
     <!-- Secondary: vibrant amber -->
     <color name="brand_secondary">#FFB300</color>
