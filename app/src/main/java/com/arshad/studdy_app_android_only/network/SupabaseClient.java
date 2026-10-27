@@ -23,13 +23,36 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public final class SupabaseClient {
 
     private static final String REST_BASE_URL =
-            BuildConfig.SUPABASE_URL + "/rest/v1/";
+            requireHttpBaseUrl(BuildConfig.SUPABASE_URL, "/rest/v1/");
     private static final String AUTH_BASE_URL =
-            BuildConfig.SUPABASE_URL + "/auth/v1/";
+            requireHttpBaseUrl(BuildConfig.SUPABASE_URL, "/auth/v1/");
 
     private static SupabaseClient instance;
 
     private final Retrofit anonRetrofit;
+
+    /**
+     * Validates the Supabase URL from local.properties before Retrofit ever
+     * sees it. Without this check, an empty or placeholder URL fails deep
+     * inside OkHttp with "Expected URL scheme 'http' or 'https' but no
+     * scheme was found", which says nothing about the actual problem.
+     * This fails fast with the real cause instead.
+     *
+     * Note: this does not make the app work without a URL — nothing can.
+     * It only turns an obscure crash into an actionable error message.
+     */
+    private static String requireHttpBaseUrl(String supabaseUrl, String path) {
+        if (supabaseUrl == null || supabaseUrl.isEmpty()
+                || !(supabaseUrl.startsWith("http://") || supabaseUrl.startsWith("https://"))) {
+            throw new IllegalStateException(
+                    "SUPABASE_URL is missing or invalid. Add a valid https:// Supabase URL "
+                            + "to local.properties (SUPABASE_URL=...) and rebuild the app.");
+        }
+        String base = supabaseUrl.endsWith("/")
+                ? supabaseUrl.substring(0, supabaseUrl.length() - 1)
+                : supabaseUrl;
+        return base + path;
+    }
 
     // Private constructor: build the anon Retrofit (no Bearer teacher token).
     private SupabaseClient() {
