@@ -48,12 +48,12 @@ public class GeminiRequest {
         @SerializedName("text")
         public String text;
 
-        @SerializedName("inline_data")
+        @SerializedName("inlineData")
         public InlineData inlineData;
     }
 
     public static class InlineData {
-        @SerializedName("mime_type")
+        @SerializedName("mimeType")
         public String mimeType;
 
         @SerializedName("data")
@@ -66,7 +66,7 @@ public class GeminiRequest {
     }
 
     public static class GenerationConfig {
-        @SerializedName("response_mime_type")
+        @SerializedName("responseMimeType")
         public String responseMimeType;
     }
 }

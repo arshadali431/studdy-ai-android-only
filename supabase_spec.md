@@ -25,13 +25,13 @@ Both enabled client-safe keys below address the same project. Prefer the modern 
 **Modern publishable key (recommended for new client):**
 
 ```text
-sb_publishable_qkXVytPo37KmKeVkVf9ZBA_9gaDYgLn
+<redacted-publishable-key>
 ```
 
 **Legacy anon key:**
 
 ```text
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9kYnljanVuZWJmbmNwa2tiYmV3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQxNjQyMDMsImV4cCI6MjA4OTc0MDIwM30.vbQQXjTR0qAxKsa0ca48ZaVKaPDs_qlmCowHYMkV6zc
+<redacted-anon-jwt>
 ```
 
 No `service_role`, `sb_secret_…`, or `SUPABASE_SERVICE_ROLE_KEY` value was found in the repository. A service-role key is therefore **not included**. It must never be embedded in an Android application.
