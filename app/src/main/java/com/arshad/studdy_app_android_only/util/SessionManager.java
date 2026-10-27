@@ -15,28 +15,35 @@ import androidx.security.crypto.MasterKey;
  *   Holds: access_token, refresh_token, user_id, email, display_name.
  *
  * Student session:
- *   Stored in plain SharedPreferences (matching original Flutter app behavior —
- *   enrollment number is not a secret).
- *   Holds: enrollment_number (String).
+ *   Enrollment number + display name in plain SharedPreferences
+ *   (enrollment number is not a secret).
+ *   Access/refresh tokens in EncryptedSharedPreferences, same as teacher
+ *   tokens — tokens must never live in plain prefs.
+ *   Holds: enrollment_number, student_name (plain);
+ *          student_access_token, student_refresh_token (encrypted).
+ *
+ * If encrypted storage cannot be created, token operations fail closed:
+ * no token is written anywhere and token getters return null, forcing a
+ * fresh login instead of silently downgrading to plaintext storage.
  */
 public class SessionManager {
 
     private static final String TAG = "SessionManager";
 
-    // ── Encrypted prefs for teacher JWT ──────────────────────────────────
+    // ── Encrypted prefs for teacher + student tokens ─────────────────────
     private static final String ENCRYPTED_PREFS_FILE = "studdy_teacher_session";
     private static final String KEY_ACCESS_TOKEN   = "access_token";
     private static final String KEY_REFRESH_TOKEN  = "refresh_token";
     private static final String KEY_TEACHER_ID     = "teacher_id";
     private static final String KEY_TEACHER_EMAIL  = "teacher_email";
     private static final String KEY_TEACHER_NAME   = "teacher_name";
+    private static final String KEY_STUDENT_ACCESS_TOKEN = "student_access_token";
+    private static final String KEY_STUDENT_REFRESH_TOKEN = "student_refresh_token";
 
-    // ── Plain prefs for student enrollment ───────────────────────────────
+    // ── Plain prefs for student enrollment (not secrets) ────────────────
     private static final String PLAIN_PREFS_FILE   = "studdy_student_session";
     private static final String KEY_ENROLLMENT     = "enrollment_number";
     private static final String KEY_STUDENT_NAME   = "student_name";
-    private static final String KEY_STUDENT_ACCESS_TOKEN = "student_access_token";
-    private static final String KEY_STUDENT_REFRESH_TOKEN = "student_refresh_token";
 
     private static SessionManager instance;
 
@@ -73,14 +80,39 @@ public class SessionManager {
                 );
             } catch (Exception e) {
                 Log.e(TAG, "Failed to create EncryptedSharedPreferences", e);
-                // Fallback to plain prefs in catastrophic error cases
-                encryptedPrefs = context.getSharedPreferences(
-                        ENCRYPTED_PREFS_FILE + "_fallback", Context.MODE_PRIVATE);
+                // Fail closed: leave encryptedPrefs null. Token getters
+                // return null and token writes are skipped, so no token
+                // is ever written to plaintext storage. Never fall back
+                // to a plaintext prefs file.
+                encryptedPrefs = null;
             }
         }
 
         if (plainPrefs == null) {
             plainPrefs = context.getSharedPreferences(PLAIN_PREFS_FILE, Context.MODE_PRIVATE);
+        }
+
+        // One-time migration (Stage 1 fix): student tokens written to plain
+        // prefs by older builds move into encrypted prefs, then are removed
+        // from plain prefs. Idempotent — after the first move there is
+        // nothing left to migrate.
+        if (encryptedPrefs != null) {
+            String oldAccess = plainPrefs.getString(KEY_STUDENT_ACCESS_TOKEN, null);
+            String oldRefresh = plainPrefs.getString(KEY_STUDENT_REFRESH_TOKEN, null);
+            if (oldAccess != null || oldRefresh != null) {
+                SharedPreferences.Editor ed = encryptedPrefs.edit();
+                if (oldAccess != null) {
+                    ed.putString(KEY_STUDENT_ACCESS_TOKEN, oldAccess);
+                }
+                if (oldRefresh != null) {
+                    ed.putString(KEY_STUDENT_REFRESH_TOKEN, oldRefresh);
+                }
+                ed.apply();
+                plainPrefs.edit()
+                        .remove(KEY_STUDENT_ACCESS_TOKEN)
+                        .remove(KEY_STUDENT_REFRESH_TOKEN)
+                        .apply();
+            }
         }
     }
 
@@ -90,6 +122,10 @@ public class SessionManager {
 
     public void saveTeacherSession(String accessToken, String refreshToken,
                                    String userId, String email, String name) {
+        if (encryptedPrefs == null) {
+            Log.e(TAG, "Cannot save teacher session: encrypted storage unavailable");
+            return;
+        }
         encryptedPrefs.edit()
                 .putString(KEY_ACCESS_TOKEN, accessToken)
                 .putString(KEY_REFRESH_TOKEN, refreshToken)
@@ -100,32 +136,61 @@ public class SessionManager {
     }
 
     public boolean hasTeacherSession() {
+        if (encryptedPrefs == null) {
+            return false;
+        }
         String token = encryptedPrefs.getString(KEY_ACCESS_TOKEN, null);
         return token != null && !token.isEmpty();
     }
 
     public String getAccessToken() {
+        if (encryptedPrefs == null) {
+            return null;
+        }
         return encryptedPrefs.getString(KEY_ACCESS_TOKEN, null);
     }
 
     public String getRefreshToken() {
+        if (encryptedPrefs == null) {
+            return null;
+        }
         return encryptedPrefs.getString(KEY_REFRESH_TOKEN, null);
     }
 
     public String getTeacherId() {
+        if (encryptedPrefs == null) {
+            return null;
+        }
         return encryptedPrefs.getString(KEY_TEACHER_ID, null);
     }
 
     public String getTeacherEmail() {
+        if (encryptedPrefs == null) {
+            return null;
+        }
         return encryptedPrefs.getString(KEY_TEACHER_EMAIL, null);
     }
 
     public String getTeacherName() {
+        if (encryptedPrefs == null) {
+            return null;
+        }
         return encryptedPrefs.getString(KEY_TEACHER_NAME, null);
     }
 
     public void clearTeacherSession() {
-        encryptedPrefs.edit().clear().apply();
+        if (encryptedPrefs == null) {
+            return;
+        }
+        // Remove teacher keys only — the encrypted file is shared with
+        // student tokens, so a blanket clear() would sign the student out too.
+        encryptedPrefs.edit()
+                .remove(KEY_ACCESS_TOKEN)
+                .remove(KEY_REFRESH_TOKEN)
+                .remove(KEY_TEACHER_ID)
+                .remove(KEY_TEACHER_EMAIL)
+                .remove(KEY_TEACHER_NAME)
+                .apply();
     }
 
     // ══════════════════════════════════════════════════════════════════════
@@ -142,6 +207,12 @@ public class SessionManager {
         plainPrefs.edit()
                 .putString(KEY_ENROLLMENT, enrollmentNumber)
                 .putString(KEY_STUDENT_NAME, name != null ? name : "")
+                .apply();
+        if (encryptedPrefs == null) {
+            Log.e(TAG, "Cannot save student tokens: encrypted storage unavailable");
+            return;
+        }
+        encryptedPrefs.edit()
                 .putString(KEY_STUDENT_ACCESS_TOKEN, accessToken)
                 .putString(KEY_STUDENT_REFRESH_TOKEN, refreshToken)
                 .apply();
@@ -161,16 +232,23 @@ public class SessionManager {
     }
 
     public String getStudentAccessToken() {
-        return plainPrefs.getString(KEY_STUDENT_ACCESS_TOKEN, null);
+        if (encryptedPrefs == null) {
+            return null;
+        }
+        return encryptedPrefs.getString(KEY_STUDENT_ACCESS_TOKEN, null);
     }
 
     public void clearStudentSession() {
         plainPrefs.edit()
                 .remove(KEY_ENROLLMENT)
                 .remove(KEY_STUDENT_NAME)
-                .remove(KEY_STUDENT_ACCESS_TOKEN)
-                .remove(KEY_STUDENT_REFRESH_TOKEN)
                 .apply();
+        if (encryptedPrefs != null) {
+            encryptedPrefs.edit()
+                    .remove(KEY_STUDENT_ACCESS_TOKEN)
+                    .remove(KEY_STUDENT_REFRESH_TOKEN)
+                    .apply();
+        }
     }
 
     // ══════════════════════════════════════════════════════════════════════
