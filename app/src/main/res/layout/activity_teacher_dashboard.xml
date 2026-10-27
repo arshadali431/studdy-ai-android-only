@@ -13,14 +13,13 @@
         android:id="@+id/layout_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="16dp"
+        android:paddingHorizontal="@dimen/page_padding"
+        android:paddingVertical="@dimen/space_lg"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/iv_menu"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            style="@style/Studdy.IconButton"
             android:src="@drawable/ic_grid"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,11 +30,10 @@
             android:id="@+id/tv_teacher_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:fontFamily="sans-serif-medium"
+            android:layout_marginStart="@dimen/space_lg"
+            android:layout_marginEnd="@dimen/space_lg"
+            android:textAppearance="@style/Studdy.TextAppearance.Headline"
             android:textColor="@color/white"
-            android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/layout_notification"
             app:layout_constraintStart_toEndOf="@+id/iv_menu"
@@ -44,15 +42,16 @@
 
         <FrameLayout
             android:id="@+id/layout_notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/touch_target"
+            android:layout_height="@dimen/touch_target"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:layout_width="28dp"
-                android:layout_height="28dp"
+                android:layout_width="@dimen/icon_md"
+                android:layout_height="@dimen/icon_md"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_notification"
                 app:tint="@color/white" />
 
@@ -85,10 +84,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="@dimen/space_xxl"
                 android:baselineAligned="false"
                 android:orientation="horizontal"
-                android:paddingHorizontal="16dp">
+                android:paddingHorizontal="@dimen/page_padding_sm">
 
                 <!-- Create Exam Card -->
                 <com.google.android.material.card.MaterialCardView
@@ -96,9 +95,9 @@
                     style="@style/Studdy.Card"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
+                    android:layout_marginEnd="@dimen/space_sm"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#F0F2FF"
+                    app:cardBackgroundColor="?attr/colorPrimaryContainer"
                     app:strokeWidth="0dp">
 
                     <LinearLayout
@@ -106,11 +105,11 @@
                         android:layout_height="wrap_content"
                         android:gravity="start"
                         android:orientation="vertical"
-                        android:padding="16dp">
+                        android:padding="@dimen/card_padding">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="@dimen/icon_xl"
+                            android:layout_height="@dimen/icon_xl"
                             android:background="@drawable/bg_circle_primary"
                             android:padding="10dp"
                             android:src="@drawable/ic_book"
@@ -119,18 +118,17 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginTop="@dimen/space_md"
+                            android:textAppearance="@style/Studdy.TextAppearance.TitleSmall"
                             android:text="Create Exam"
-                            android:textColor="@color/text_primary"
-                            android:textSize="16sp" />
+                            android:textColor="?attr/colorOnPrimaryContainer" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textAppearance="@style/Studdy.TextAppearance.Caption"
                             android:text="AI MCQ Exam"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="12sp" />
+                            android:textColor="?attr/colorOnPrimaryContainer" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
@@ -140,9 +138,9 @@
                     style="@style/Studdy.Card"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
+                    android:layout_marginStart="@dimen/space_sm"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#F0F2FF"
+                    app:cardBackgroundColor="?attr/colorPrimaryContainer"
                     app:strokeWidth="0dp">
 
                     <LinearLayout
@@ -150,11 +148,11 @@
                         android:layout_height="wrap_content"
                         android:gravity="start"
                         android:orientation="vertical"
-                        android:padding="16dp">
+                        android:padding="@dimen/card_padding">
 
                         <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
+                            android:layout_width="@dimen/icon_xl"
+                            android:layout_height="@dimen/icon_xl"
                             android:background="@drawable/bg_circle_primary"
                             android:padding="10dp"
                             android:src="@drawable/ic_upload"
@@ -163,18 +161,17 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="12dp"
-                            android:fontFamily="sans-serif-medium"
+                            android:layout_marginTop="@dimen/space_md"
+                            android:textAppearance="@style/Studdy.TextAppearance.TitleSmall"
                             android:text="Generate Paper"
-                            android:textColor="@color/text_primary"
-                            android:textSize="16sp" />
+                            android:textColor="?attr/colorOnPrimaryContainer" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textAppearance="@style/Studdy.TextAppearance.Caption"
                             android:text="AI Paper From PDF"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="12sp" />
+                            android:textColor="?attr/colorOnPrimaryContainer" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
@@ -183,29 +180,28 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="@dimen/space_xxxl"
                 android:orientation="vertical"
-                android:paddingHorizontal="16dp">
+                android:paddingHorizontal="@dimen/page_padding_sm">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-medium"
+                    android:textAppearance="@style/Studdy.TextAppearance.Title"
                     android:text="Recent Exams"
-                    android:textColor="@color/text_primary"
-                    android:textSize="18sp" />
+                    android:textColor="?attr/colorOnSurface" />
 
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_height="@dimen/divider_height"
+                    android:layout_marginTop="@dimen/space_sm"
                     android:background="@color/divider" />
 
                 <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
                     android:id="@+id/swipe_refresh"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp">
+                    android:layout_marginTop="@dimen/space_lg">
 
                     <FrameLayout
                         android:layout_width="match_parent"
@@ -227,7 +223,7 @@
                             android:layout_gravity="center"
                             android:gravity="center"
                             android:orientation="vertical"
-                            android:padding="24dp"
+                            android:padding="@dimen/space_xxl"
                             android:visibility="gone">
 
                             <ImageView
@@ -240,11 +236,11 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
+                                android:layout_marginTop="@dimen/space_md"
                                 android:gravity="center"
+                                android:textAppearance="@style/Studdy.TextAppearance.Body"
                                 android:text="No exams created yet"
-                                android:textColor="@color/text_secondary"
-                                android:textSize="14sp" />
+                                android:textColor="?attr/colorOnSurfaceVariant" />
                         </LinearLayout>
                     </FrameLayout>
                 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
@@ -256,7 +252,7 @@
         android:id="@+id/fab_create_exam"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/space_lg"
         android:contentDescription="Create"
         android:src="@drawable/ic_add"
         app:backgroundTint="@color/brand_primary_darker"
