@@ -12,12 +12,12 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFF3E0"
+        android:background="@color/color_warning_light"
         android:padding="12dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
         android:text="Changing the correct answer will only affect students who have not yet submitted."
-        android:textColor="#E65100"
+        android:textColor="@color/color_warning"
         android:textSize="13sp"
         android:fontFamily="sans-serif" />
 

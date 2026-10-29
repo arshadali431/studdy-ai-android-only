@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_page">
+    android:background="?attr/colorBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Upload PDF"
-                            android:textColor="@color/text_primary"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="11sp" />
                     </LinearLayout>
 
@@ -71,7 +71,7 @@
                         android:layout_height="1dp"
                         android:layout_marginHorizontal="8dp"
                         android:layout_marginTop="-10dp"
-                        android:background="@color/divider" />
+                        android:background="?attr/colorOutline" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -88,7 +88,7 @@
                                 android:background="@drawable/bg_circle_grey"
                                 android:gravity="center"
                                 android:text="2"
-                                android:textColor="@color/text_secondary"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="14sp"
                                 android:fontFamily="sans-serif-bold" />
                             <ImageView
@@ -107,7 +107,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Configure"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="?attr/colorOnSurfaceVariant"
                             android:textSize="11sp" />
                     </LinearLayout>
 
@@ -116,7 +116,7 @@
                         android:layout_height="1dp"
                         android:layout_marginHorizontal="8dp"
                         android:layout_marginTop="-10dp"
-                        android:background="@color/divider" />
+                        android:background="?attr/colorOutline" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -130,7 +130,7 @@
                             android:background="@drawable/bg_circle_grey"
                             android:gravity="center"
                             android:text="3"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="?attr/colorOnSurfaceVariant"
                             android:textSize="14sp"
                             android:fontFamily="sans-serif-bold" />
                         <TextView
@@ -139,7 +139,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="Generate"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="?attr/colorOnSurfaceVariant"
                             android:textSize="11sp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -151,7 +151,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="20dp"
                     android:layout_marginBottom="20dp"
-                    app:strokeColor="@color/divider">
+                    app:strokeColor="?attr/colorOutline">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -170,7 +170,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16dp"
                             android:text="Upload Syllabus PDF"
-                            android:textColor="@color/text_primary"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="16sp"
                             android:fontFamily="sans-serif-bold" />
 
@@ -179,7 +179,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
                             android:text="AI will generate questions strictly from this PDF"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="?attr/colorOnSurfaceVariant"
                             android:textSize="13sp"
                             android:gravity="center" />
 
@@ -192,7 +192,7 @@
                             android:text="Choose PDF"
                             android:textAllCaps="false"
                             app:cornerRadius="20dp"
-                            android:minHeight="40dp" />
+                            android:minHeight="48dp" />
 
                         <TextView
                             android:id="@+id/tv_pdf_name"
@@ -242,7 +242,7 @@
                             android:layout_marginTop="16dp"
                             android:layout_marginBottom="8dp"
                             android:text="Template"
-                            android:textColor="@color/text_primary"
+                            android:textColor="?attr/colorOnSurface"
                             android:fontFamily="sans-serif-medium" />
 
                         <Spinner
@@ -257,7 +257,7 @@
                             android:layout_marginTop="20dp"
                             android:layout_marginBottom="12dp"
                             android:text="Overall Difficulty"
-                            android:textColor="@color/text_primary"
+                            android:textColor="?attr/colorOnSurface"
                             android:fontFamily="sans-serif-medium" />
 
                         <com.google.android.material.button.MaterialButtonToggleGroup
@@ -320,14 +320,15 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Paper Structure"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="16sp"
                                 android:fontFamily="sans-serif-bold" />
                             <ImageView
                                 android:id="@+id/btn_add_section_header"
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
                                 android:src="@drawable/ic_plus"
+                                android:padding="12dp"
                                 app:tint="@color/brand_primary"
                                 android:background="?attr/selectableItemBackgroundBorderless"
                                 android:clickable="true"
@@ -346,7 +347,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Total Marks:"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurface"
                                 android:fontFamily="sans-serif-medium" />
                             <TextView
                                 android:id="@+id/tv_total_marks"
@@ -386,7 +387,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/bg_card"
+            android:background="?attr/colorSurface"
             android:padding="16dp"
             android:elevation="8dp">
             <com.google.android.material.button.MaterialButton
@@ -398,7 +399,7 @@
                 android:textAllCaps="false"
                 app:cornerRadius="16dp"
                 android:fontFamily="sans-serif-bold"
-                android:backgroundTint="#9C27B0" />
+                android:backgroundTint="@color/brand_primary" />
         </LinearLayout>
     </LinearLayout>
 
@@ -419,7 +420,7 @@
             android:layout_gravity="center"
             app:cardCornerRadius="16dp"
             app:cardElevation="8dp"
-            app:cardBackgroundColor="@color/bg_card">
+            app:cardBackgroundColor="?attr/colorSurface">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -441,7 +442,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="Processing..."
-                    android:textColor="@color/text_primary"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="15sp"
                     android:fontFamily="sans-serif-medium" />
             </LinearLayout>

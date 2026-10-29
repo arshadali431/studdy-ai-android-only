@@ -15,6 +15,11 @@
 
     <!-- Accent: teal -->
     <color name="brand_accent">#26C6DA</color>
+    <color name="brand_teal_surface">#E0F7FA</color>
+    <color name="brand_teal_dark">#006064</color>
+    <color name="brand_teal_light">#B2EBF2</color>
+    <color name="success_container_dark">#1E3324</color>
+    <color name="success_on_container_dark">#A5D6A7</color>
 
     <!-- ── Surface / background ───────────────────────────────────────────── -->
     <color name="bg_page">#F4F5FB</color>

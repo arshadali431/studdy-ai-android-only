@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_page"
+    android:background="?attr/colorBackground"
     tools:context=".ui.teacher.create.CreateExamActivity">
 
     <LinearLayout
@@ -46,9 +46,9 @@
                         style="@style/Studdy.Card.Flat"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginEnd="15dp">
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -100,7 +100,7 @@
                                 android:layout_marginBottom="8dp"
                                 android:fontFamily="sans-serif-medium"
                                 android:text="OR Upload PDF Content"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="14sp" />
 
                             <LinearLayout
@@ -125,15 +125,15 @@
                                     android:layout_weight="1"
                                     android:layout_marginStart="12dp"
                                     android:text="No PDF file selected"
-                                    android:textColor="@color/text_secondary"
+                                    android:textColor="?attr/colorOnSurfaceVariant"
                                     android:textSize="13sp"
                                     android:ellipsize="end"
                                     android:maxLines="1" />
 
                                 <ImageButton
                                     android:id="@+id/btn_clear_pdf"
-                                    android:layout_width="36dp"
-                                    android:layout_height="36dp"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
                                     android:layout_marginStart="8dp"
                                     android:background="?attr/selectableItemBackgroundBorderless"
                                     android:src="@drawable/ic_delete"
@@ -153,7 +153,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Paper Template"
-                                    android:textColor="@color/text_primary"
+                                    android:textColor="?attr/colorOnSurface"
                                     android:textSize="14sp"
                                     android:fontFamily="sans-serif-medium"
                                     android:layout_marginBottom="8dp" />
@@ -169,7 +169,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Overall Difficulty"
-                                    android:textColor="@color/text_primary"
+                                    android:textColor="?attr/colorOnSurface"
                                     android:textSize="14sp"
                                     android:fontFamily="sans-serif-medium"
                                     android:layout_marginBottom="12dp" />
@@ -223,7 +223,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_weight="1"
                                         android:text="Paper Structure"
-                                        android:textColor="@color/text_primary"
+                                        android:textColor="?attr/colorOnSurface"
                                         android:textSize="14sp"
                                         android:fontFamily="sans-serif-medium" />
 
@@ -231,7 +231,7 @@
                                         android:id="@+id/btn_add_section"
                                         style="@style/Studdy.Button.Secondary"
                                         android:layout_width="wrap_content"
-                                        android:layout_height="40dp"
+                                        android:layout_height="@dimen/btn_height_sm"
                                         android:text="Add Section"
                                         android:textAllCaps="false" />
                                 </LinearLayout>
@@ -241,7 +241,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="Create the paper by adding sections with question counts, marks, and difficulty."
-                                    android:textColor="@color/text_secondary"
+                                    android:textColor="?attr/colorOnSurfaceVariant"
                                     android:textSize="13sp"
                                     android:layout_marginBottom="16dp" />
 
@@ -257,7 +257,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="No sections yet. Add a section to start building the paper."
-                                    android:textColor="@color/text_secondary"
+                                    android:textColor="?attr/colorOnSurfaceVariant"
                                     android:textSize="13sp"
                                     android:gravity="center"
                                     android:visibility="visible"
@@ -281,14 +281,14 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="Total Sections"
-                                            android:textColor="@color/text_secondary"
+                                            android:textColor="?attr/colorOnSurfaceVariant"
                                             android:textSize="12sp" />
                                         <TextView
                                             android:id="@+id/tv_paper_section_count"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="0"
-                                            android:textColor="@color/text_primary"
+                                            android:textColor="?attr/colorOnSurface"
                                             android:textSize="16sp"
                                             android:fontFamily="sans-serif-medium" />
                                     </LinearLayout>
@@ -302,14 +302,14 @@
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="Total Marks"
-                                            android:textColor="@color/text_secondary"
+                                            android:textColor="?attr/colorOnSurfaceVariant"
                                             android:textSize="12sp" />
                                         <TextView
                                             android:id="@+id/tv_paper_total_marks"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:text="0"
-                                            android:textColor="@color/text_primary"
+                                            android:textColor="?attr/colorOnSurface"
                                             android:textSize="16sp"
                                             android:fontFamily="sans-serif-medium" />
                                     </LinearLayout>
@@ -329,7 +329,7 @@
                                     android:layout_marginBottom="8dp"
                                     android:fontFamily="sans-serif-medium"
                                     android:text="Number of Questions to Generate"
-                                    android:textColor="@color/text_primary"
+                                    android:textColor="?attr/colorOnSurface"
                                     android:textSize="14sp" />
 
                                 <LinearLayout
@@ -361,7 +361,7 @@
                                         android:layout_height="wrap_content"
                                         android:gravity="center"
                                         android:text="10"
-                                        android:textColor="@color/text_primary"
+                                        android:textColor="?attr/colorOnSurface"
                                         android:textSize="18sp"
                                         android:fontFamily="sans-serif-medium" />
 
@@ -389,7 +389,7 @@
                                     android:layout_marginBottom="12dp"
                                     android:fontFamily="sans-serif-medium"
                                     android:text="Difficulty"
-                                    android:textColor="@color/text_primary"
+                                    android:textColor="?attr/colorOnSurface"
                                     android:textSize="14sp" />
 
                                 <com.google.android.material.button.MaterialButtonToggleGroup
@@ -437,7 +437,7 @@
                                 android:layout_marginBottom="12dp"
                                 android:fontFamily="sans-serif-medium"
                                 android:text="Result Publish Mode"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="15sp" />
 
                             <LinearLayout
@@ -561,7 +561,7 @@
                                 android:layout_marginBottom="12dp"
                                 android:fontFamily="sans-serif-medium"
                                 android:text="Timer Configuration"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="15sp" />
 
                             <LinearLayout
@@ -661,7 +661,7 @@
                                 style="@style/Studdy.Card.Flat"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                app:cardBackgroundColor="#F9F7FF"
+                                app:cardBackgroundColor="?attr/colorPrimaryContainer"
                                 app:strokeColor="@color/brand_primary"
                                 android:layout_marginBottom="24dp"
                                 android:visibility="gone"
@@ -677,7 +677,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:text="Duration (minutes)"
-                                    android:textColor="@color/text_secondary"
+                                    android:textColor="?attr/colorOnSurfaceVariant"
                                     android:textSize="14sp"
                                     android:fontFamily="sans-serif-medium" />
 
@@ -702,7 +702,7 @@
                                         android:layout_height="wrap_content"
                                         android:gravity="center"
                                         android:text="60"
-                                        android:textColor="@color/text_primary"
+                                        android:textColor="?attr/colorOnSurface"
                                         android:textSize="28sp"
                                         android:fontFamily="sans-serif-black" />
 
@@ -855,7 +855,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginBottom="28dp"
                                 android:text="Enable Camera Proctoring Mode"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="15sp"
                                 android:checked="true"
                                 android:fontFamily="sans-serif-medium" />
@@ -909,7 +909,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/bg_card"
+            android:background="?attr/colorSurface"
             android:padding="16dp"
             android:elevation="8dp"
             android:visibility="gone"
@@ -946,7 +946,7 @@
             android:layout_gravity="center"
             app:cardCornerRadius="16dp"
             app:cardElevation="8dp"
-            app:cardBackgroundColor="@color/bg_card">
+            app:cardBackgroundColor="?attr/colorSurface">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -968,7 +968,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
                     android:text="Processing..."
-                    android:textColor="@color/text_primary"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="15sp"
                     android:fontFamily="sans-serif-medium" />
             </LinearLayout>

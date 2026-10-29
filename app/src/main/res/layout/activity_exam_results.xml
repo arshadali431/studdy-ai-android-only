@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_page"
+    android:background="?attr/colorBackground"
     tools:context=".ui.teacher.results.ExamResultsActivity">
 
     <LinearLayout
@@ -50,7 +50,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
-                        android:textColor="@color/brand_primary_darker"
+                        android:textColor="?attr/colorPrimary"
                         android:textSize="20sp"
                         tools:text="14" />
 
@@ -59,14 +59,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:text="Participants"
-                        android:textColor="@color/text_secondary"
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:textSize="12sp" />
                 </LinearLayout>
 
                 <View
                     android:layout_width="1dp"
                     android:layout_height="match_parent"
-                    android:background="@color/divider" />
+                    android:background="?attr/colorOutline" />
 
                 <!-- Average score stats -->
                 <LinearLayout
@@ -81,7 +81,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
-                        android:textColor="@color/brand_primary_darker"
+                        android:textColor="?attr/colorPrimary"
                         android:textSize="20sp"
                         tools:text="82%" />
 
@@ -90,7 +90,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="2dp"
                         android:text="Average Score"
-                        android:textColor="@color/text_secondary"
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:textSize="12sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -180,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="No student results found."
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="15sp"
                 android:visibility="gone" />
         </FrameLayout>

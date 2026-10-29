@@ -11,23 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="@dimen/page_padding">
 
         <!-- Question text card -->
         <com.google.android.material.card.MaterialCardView
             style="@style/Studdy.Card.Flat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp">
+            android:layout_marginBottom="@dimen/space_xxl"
+            app:cardBackgroundColor="?attr/colorSurface">
 
             <TextView
                 android:id="@+id/tv_question_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lineSpacingMultiplier="1.2"
-                android:padding="20dp"
-                android:textColor="@color/text_primary"
-                android:textSize="17sp"
+                android:padding="@dimen/card_padding_large"
+                android:textAppearance="@style/Studdy.TextAppearance.TitleSmall"
+                android:textColor="?attr/colorOnSurface"
                 tools:text="Which of the following is the fundamental unit of electric current in the International System of Units (SI)?" />
         </com.google.android.material.card.MaterialCardView>
 
@@ -44,38 +45,38 @@
                 style="@style/Studdy.Card.Flat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="@dimen/space_md"
                 android:clickable="true"
                 android:focusable="true"
-                app:strokeColor="@color/stroke_light"
-                app:strokeWidth="1dp">
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:strokeColor="?attr/colorOutline"
+                app:strokeWidth="@dimen/divider_height">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp">
+                    android:padding="@dimen/card_padding">
 
                     <TextView
                         android:id="@+id/tv_option_label_0"
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="@dimen/icon_lg"
+                        android:layout_height="@dimen/icon_lg"
                         android:background="@drawable/bg_circle_primary_light"
                         android:gravity="center"
+                        android:textAppearance="@style/Studdy.TextAppearance.Label"
                         android:textColor="@color/brand_primary"
-                        android:textSize="14sp"
-                        android:fontFamily="sans-serif-medium"
                         android:text="A" />
 
                     <TextView
                         android:id="@+id/tv_option_text_0"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
+                        android:layout_marginStart="@dimen/space_md"
                         android:layout_weight="1"
-                        android:textColor="@color/text_primary"
-                        android:textSize="15sp"
+                        android:textAppearance="@style/Studdy.TextAppearance.Body"
+                        android:textColor="?attr/colorOnSurface"
                         tools:text="Ampere" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -86,38 +87,38 @@
                 style="@style/Studdy.Card.Flat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="@dimen/space_md"
                 android:clickable="true"
                 android:focusable="true"
-                app:strokeColor="@color/stroke_light"
-                app:strokeWidth="1dp">
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:strokeColor="?attr/colorOutline"
+                app:strokeWidth="@dimen/divider_height">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp">
+                    android:padding="@dimen/card_padding">
 
                     <TextView
                         android:id="@+id/tv_option_label_1"
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="@dimen/icon_lg"
+                        android:layout_height="@dimen/icon_lg"
                         android:background="@drawable/bg_circle_primary_light"
                         android:gravity="center"
+                        android:textAppearance="@style/Studdy.TextAppearance.Label"
                         android:textColor="@color/brand_primary"
-                        android:textSize="14sp"
-                        android:fontFamily="sans-serif-medium"
                         android:text="B" />
 
                     <TextView
                         android:id="@+id/tv_option_text_1"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
+                        android:layout_marginStart="@dimen/space_md"
                         android:layout_weight="1"
-                        android:textColor="@color/text_primary"
-                        android:textSize="15sp"
+                        android:textAppearance="@style/Studdy.TextAppearance.Body"
+                        android:textColor="?attr/colorOnSurface"
                         tools:text="Volt" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -128,38 +129,38 @@
                 style="@style/Studdy.Card.Flat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="@dimen/space_md"
                 android:clickable="true"
                 android:focusable="true"
-                app:strokeColor="@color/stroke_light"
-                app:strokeWidth="1dp">
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:strokeColor="?attr/colorOutline"
+                app:strokeWidth="@dimen/divider_height">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp">
+                    android:padding="@dimen/card_padding">
 
                     <TextView
                         android:id="@+id/tv_option_label_2"
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="@dimen/icon_lg"
+                        android:layout_height="@dimen/icon_lg"
                         android:background="@drawable/bg_circle_primary_light"
                         android:gravity="center"
+                        android:textAppearance="@style/Studdy.TextAppearance.Label"
                         android:textColor="@color/brand_primary"
-                        android:textSize="14sp"
-                        android:fontFamily="sans-serif-medium"
                         android:text="C" />
 
                     <TextView
                         android:id="@+id/tv_option_text_2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
+                        android:layout_marginStart="@dimen/space_md"
                         android:layout_weight="1"
-                        android:textColor="@color/text_primary"
-                        android:textSize="15sp"
+                        android:textAppearance="@style/Studdy.TextAppearance.Body"
+                        android:textColor="?attr/colorOnSurface"
                         tools:text="Ohm" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -170,38 +171,38 @@
                 style="@style/Studdy.Card.Flat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
+                android:layout_marginBottom="@dimen/space_md"
                 android:clickable="true"
                 android:focusable="true"
-                app:strokeColor="@color/stroke_light"
-                app:strokeWidth="1dp">
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:strokeColor="?attr/colorOutline"
+                app:strokeWidth="@dimen/divider_height">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:padding="16dp">
+                    android:padding="@dimen/card_padding">
 
                     <TextView
                         android:id="@+id/tv_option_label_3"
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
+                        android:layout_width="@dimen/icon_lg"
+                        android:layout_height="@dimen/icon_lg"
                         android:background="@drawable/bg_circle_primary_light"
                         android:gravity="center"
+                        android:textAppearance="@style/Studdy.TextAppearance.Label"
                         android:textColor="@color/brand_primary"
-                        android:textSize="14sp"
-                        android:fontFamily="sans-serif-medium"
                         android:text="D" />
 
                     <TextView
                         android:id="@+id/tv_option_text_3"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="14dp"
+                        android:layout_marginStart="@dimen/space_md"
                         android:layout_weight="1"
-                        android:textColor="@color/text_primary"
-                        android:textSize="15sp"
+                        android:textAppearance="@style/Studdy.TextAppearance.Body"
+                        android:textColor="?attr/colorOnSurface"
                         tools:text="Coulomb" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>

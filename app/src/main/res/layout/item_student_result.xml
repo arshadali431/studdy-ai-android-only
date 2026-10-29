@@ -31,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:textColor="@color/text_primary"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="15sp"
                 tools:text="Arshad Ali" />
 
@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="12sp"
                 tools:text="Enrollment: 2405112070013" />
 
@@ -60,7 +60,7 @@
                     android:paddingTop="2dp"
                     android:paddingEnd="6dp"
                     android:paddingBottom="2dp"
-                    android:textColor="@color/brand_primary_darker"
+                    android:textColor="?attr/colorPrimary"
                     android:textSize="10sp"
                     android:fontFamily="sans-serif-medium"
                     tools:text="2 warnings" />

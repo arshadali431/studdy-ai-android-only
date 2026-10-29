@@ -1,21 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Spacing -->
+    <!-- Spacing scale (4dp base unit — use these instead of hardcoded dp) -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">12dp</dimen>
+    <dimen name="space_lg">16dp</dimen>
+    <dimen name="space_xl">20dp</dimen>
+    <dimen name="space_xxl">24dp</dimen>
+    <dimen name="space_xxxl">32dp</dimen>
 
     <!-- Card radius -->
+    <dimen name="radius_sm">10dp</dimen>
     <dimen name="radius_md">12dp</dimen>
+    <dimen name="radius_lg">16dp</dimen>
+    <dimen name="radius_xl">20dp</dimen>
 
     <!-- Buttons -->
     <dimen name="btn_height">52dp</dimen>
-    <dimen name="btn_height_sm">40dp</dimen>
+    <dimen name="btn_height_sm">48dp</dimen>
+    <dimen name="hero_circle">128dp</dimen>
+    <dimen name="hero_icon">64dp</dimen>
 
     <!-- Text field -->
+    <dimen name="text_field_height">56dp</dimen>
 
     <!-- Page padding -->
+    <dimen name="page_padding">20dp</dimen>
+    <dimen name="page_padding_sm">16dp</dimen>
+
+    <!-- Card padding -->
+    <dimen name="card_padding">16dp</dimen>
+    <dimen name="card_padding_large">20dp</dimen>
 
     <!-- Icon sizes -->
+    <dimen name="icon_sm">20dp</dimen>
+    <dimen name="icon_md">24dp</dimen>
+    <dimen name="icon_lg">28dp</dimen>
+    <dimen name="icon_xl">40dp</dimen>
+
+    <!-- Minimum touch target (accessibility) -->
+    <dimen name="touch_target">48dp</dimen>
 
     <!-- Divider -->
+    <dimen name="divider_height">1dp</dimen>
 
     <!-- Elevation -->
+    <dimen name="elevation_card">3dp</dimen>
+    <dimen name="elevation_none">0dp</dimen>
 </resources>

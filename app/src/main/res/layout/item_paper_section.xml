@@ -5,11 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
-    app:cardBackgroundColor="#F8F9FE"
+    app:cardBackgroundColor="?attr/colorSurfaceVariant"
     app:cardCornerRadius="12dp"
     app:cardElevation="0dp"
     app:strokeWidth="1dp"
-    app:strokeColor="#EEF0F8">
+    app:strokeColor="?attr/colorSurfaceVariant">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Section A - MCQ"
-                android:textColor="@color/text_primary"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="14sp"
                 android:fontFamily="sans-serif-bold" />
 
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="10 questions × 1 marks = 10 marks"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="12sp" />
 
             <LinearLayout
@@ -63,11 +63,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_pill_accent"
-                    android:backgroundTint="#E3F2FD"
+                    android:backgroundTint="?attr/colorPrimaryContainer"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="2dp"
                     android:text="MCQ"
-                    android:textColor="#2196F3"
+                    android:textColor="@color/color_info"
                     android:textSize="10sp"
                     android:fontFamily="sans-serif-bold" />
 
@@ -77,11 +77,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:background="@drawable/bg_pill_accent"
-                    android:backgroundTint="#F1F8E9"
+                    android:backgroundTint="?attr/colorSuccessContainer"
                     android:paddingHorizontal="8dp"
                     android:paddingVertical="2dp"
                     android:text="EASY"
-                    android:textColor="#4CAF50"
+                    android:textColor="@color/color_success"
                     android:textSize="10sp"
                     android:fontFamily="sans-serif-bold" />
             </LinearLayout>
@@ -93,7 +93,7 @@
             android:layout_height="36dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@drawable/ic_delete"
-            app:tint="#EF5350" />
+            app:tint="@color/color_error" />
 
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>

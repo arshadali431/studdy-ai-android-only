@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_page"
+    android:background="?attr/colorBackground"
     tools:context=".ui.teacher.papers.PaperDetailActivity">
 
     <LinearLayout
@@ -75,7 +75,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:gravity="center"
-                    android:textColor="@color/text_primary"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="20sp"
                     android:fontFamily="sans-serif-medium"
                     tools:text="Final Physics Exam Paper" />
@@ -97,7 +97,7 @@
                             android:id="@+id/tv_detail_marks"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/text_primary"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="14sp"
                             tools:text="Total Marks: 100" />
 
@@ -106,13 +106,13 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:background="@color/divider" />
+                            android:background="?attr/colorOutline" />
 
                         <TextView
                             android:id="@+id/tv_detail_template"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/text_primary"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="14sp"
                             tools:text="Template: MCQ &amp; Short Answer" />
 
@@ -121,13 +121,13 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:background="@color/divider" />
+                            android:background="?attr/colorOutline" />
 
                         <TextView
                             android:id="@+id/tv_detail_difficulty"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/text_primary"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="14sp"
                             tools:text="Difficulty: Medium" />
 
@@ -136,13 +136,13 @@
                             android:layout_height="1dp"
                             android:layout_marginTop="10dp"
                             android:layout_marginBottom="10dp"
-                            android:background="@color/divider" />
+                            android:background="?attr/colorOutline" />
 
                         <TextView
                             android:id="@+id/tv_detail_date"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textColor="@color/text_primary"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="14sp"
                             tools:text="Created On: 2026-07-04" />
                     </LinearLayout>

@@ -6,6 +6,10 @@
         <item name="colorOnPrimary">@color/brand_primary_darker</item>
         <item name="colorPrimaryContainer">@color/brand_primary_dark</item>
         <item name="colorOnPrimaryContainer">@color/brand_primary_light</item>
+        <item name="colorTertiaryContainer">@color/brand_teal_dark</item>
+        <item name="colorOnTertiaryContainer">@color/brand_teal_light</item>
+        <item name="colorSuccessContainer">@color/success_container_dark</item>
+        <item name="colorOnSuccessContainer">@color/success_on_container_dark</item>
         <item name="android:colorBackground">@color/bg_page_dark</item>
         <item name="colorSurface">@color/bg_card_dark</item>
         <item name="colorOnSurface">@color/white</item>
