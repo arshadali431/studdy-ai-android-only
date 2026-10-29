@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="16dp"
-        app:cardBackgroundColor="@color/bg_page">
+        app:cardBackgroundColor="?attr/colorBackground">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-medium"
-                    android:textColor="@color/text_primary"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
                     tools:text="Arshad Ali" />
 
@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="13sp"
                 tools:text="Enrollment: 2405112070013" />
 
@@ -64,7 +64,7 @@
                 android:layout_height="1dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:background="@color/divider" />
+                android:background="?attr/colorOutline" />
 
             <TextView
                 android:id="@+id/tv_dialog_student_telemetry"
@@ -80,7 +80,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question Breakdown"
-        android:textColor="@color/text_primary"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="14sp"
         android:fontFamily="sans-serif-medium"
         android:layout_marginBottom="8dp" />

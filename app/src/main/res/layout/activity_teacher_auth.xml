@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_page"
+    android:background="?attr/colorBackground"
     tools:context=".ui.auth.TeacherAuthActivity">
 
     <androidx.core.widget.NestedScrollView
@@ -23,13 +23,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/bg_card"
-                android:elevation="2dp"
+                android:background="@color/brand_primary"
                 android:orientation="vertical"
-                android:paddingStart="16dp"
-                android:paddingTop="48dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="0dp">
+                android:paddingStart="@dimen/page_padding_sm"
+                android:paddingTop="@dimen/space_lg"
+                android:paddingEnd="@dimen/page_padding_sm"
+                android:paddingBottom="@dimen/space_xl">
 
                 <!-- Back button + Title row -->
                 <LinearLayout
@@ -40,12 +39,12 @@
 
                     <ImageButton
                         android:id="@+id/btn_back"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="@dimen/touch_target"
+                        android:layout_height="@dimen/touch_target"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:contentDescription="@string/back"
                         android:src="@drawable/ic_back"
-                        app:tint="@color/text_primary" />
+                        app:tint="@color/white" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -57,42 +56,44 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-medium"
+                            android:textAppearance="@style/Studdy.TextAppearance.HeadlineLarge"
                             android:text="@string/teacher_portal"
-                            android:textColor="@color/text_primary"
-                            android:textSize="22sp" />
+                            android:textColor="@color/white" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="2dp"
                             android:text="@string/teacher_portal_subtitle"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="13sp" />
+                            android:textColor="@color/brand_primary_surface"
+                            android:textAppearance="@style/Studdy.TextAppearance.BodySmall" />
                     </LinearLayout>
                 </LinearLayout>
-
-                <!-- Mode tabs -->
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tab_layout"
-                    style="@style/Studdy.TabLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:background="@android:color/transparent">
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sign_in" />
-
-                    <com.google.android.material.tabs.TabItem
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/sign_up" />
-
-                </com.google.android.material.tabs.TabLayout>
             </LinearLayout>
+
+            <!-- Mode tabs -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_layout"
+                style="@style/Studdy.TabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_lg"
+                android:background="@android:color/transparent"
+                app:tabTextColor="?attr/colorOnSurfaceVariant"
+                app:tabSelectedTextColor="?attr/colorPrimary"
+                app:tabIndicatorColor="?attr/colorPrimary">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_in" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sign_up" />
+
+            </com.google.android.material.tabs.TabLayout>
 
             <!-- ── Form card ──────────────────────────────────────────── -->
             <com.google.android.material.card.MaterialCardView
@@ -101,7 +102,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="20dp">
+                android:layout_marginEnd="20dp"
+                app:strokeColor="?attr/colorPrimary"
+                app:strokeWidth="1.5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -218,14 +221,14 @@
                     android:layout_height="16dp"
                     android:contentDescription="@null"
                     android:src="@drawable/ic_lock"
-                    app:tint="@color/text_hint" />
+                    app:tint="?attr/colorOnSurfaceVariant" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="6dp"
                     android:text="@string/teacher_portal_footer"
-                    android:textColor="@color/text_hint"
+                    android:textColor="?attr/colorOnSurfaceVariant"
                     android:textSize="13sp" />
             </LinearLayout>
 

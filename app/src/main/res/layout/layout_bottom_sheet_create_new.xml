@@ -12,8 +12,8 @@
         android:layout_height="4dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginBottom="16dp"
-        android:background="@color/divider"
-        android:backgroundTint="@color/text_hint"
+        android:background="?attr/colorOutline"
+        android:backgroundTint="?attr/colorOnSurfaceVariant"
         app:shapeAppearance="@style/Studdy.Dialog.Shape" />
 
     <TextView
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-medium"
         android:text="Create New"
-        android:textColor="@color/text_primary"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="20sp" />
 
     <LinearLayout
@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:text="Create MCQ Exam"
-                android:textColor="@color/text_primary"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="16sp" />
 
             <TextView
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="AI Generates MCQ Questions"
-                android:textColor="@color/text_hint"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="13sp" />
         </LinearLayout>
     </LinearLayout>
@@ -73,7 +73,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginVertical="8dp"
-        android:background="@color/divider" />
+        android:background="?attr/colorOutline" />
 
     <LinearLayout
         android:id="@+id/btn_generate_paper"
@@ -106,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:text="Generate Exam Paper"
-                android:textColor="@color/text_primary"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="16sp" />
 
             <TextView
@@ -114,7 +114,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
                 android:text="Full Paper With Sections From PDF"
-                android:textColor="@color/text_hint"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="13sp" />
         </LinearLayout>
     </LinearLayout>

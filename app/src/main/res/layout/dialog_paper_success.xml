@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="24dp"
-        app:cardBackgroundColor="@color/bg_page">
+        app:cardBackgroundColor="?attr/colorBackground">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
-                android:textColor="@color/text_primary"
+                android:textColor="?attr/colorOnSurface"
                 android:textSize="18sp"
                 tools:text="Biology Final Exam"
                 android:layout_marginBottom="8dp" />
@@ -45,7 +45,7 @@
                 android:id="@+id/tv_success_question_count"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="14sp"
                 tools:text="Questions: 15"
                 android:layout_marginBottom="4dp" />
@@ -54,7 +54,7 @@
                 android:id="@+id/tv_success_total_marks"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="14sp"
                 tools:text="Total Marks: 50" />
         </LinearLayout>
@@ -76,6 +76,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Done"
-        android:textColor="@color/text_secondary" />
+        android:textColor="?attr/colorOnSurfaceVariant" />
 
 </LinearLayout>

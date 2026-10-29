@@ -50,7 +50,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/space_sm"
                 android:textAppearance="@style/Studdy.TextAppearance.Caption"
-                android:textColor="@color/text_hint"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 tools:text="Created: July 4, 2026" />
         </LinearLayout>
 

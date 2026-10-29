@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add New Section"
-        android:textColor="@color/text_primary"
+        android:textColor="?attr/colorOnSurface"
         android:textSize="18sp"
         android:fontFamily="sans-serif-bold"
         android:layout_marginBottom="24dp" />
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question Type"
-        android:textColor="@color/text_secondary"
+        android:textColor="?attr/colorOnSurfaceVariant"
         android:textSize="12sp"
         android:layout_marginBottom="8dp" />
     <Spinner
@@ -59,7 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Question Count"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="12sp"
                 android:layout_marginBottom="8dp" />
             <LinearLayout
@@ -80,7 +80,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="5"
-                    android:textColor="@color/text_primary"
+                    android:textColor="?attr/colorOnSurface"
                     android:fontFamily="sans-serif-bold" />
                 <ImageButton
                     android:id="@+id/btn_section_count_increment"
@@ -101,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Marks Per Q"
-                android:textColor="@color/text_secondary"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="12sp"
                 android:layout_marginBottom="8dp" />
             <LinearLayout
@@ -122,7 +122,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="2"
-                    android:textColor="@color/text_primary"
+                    android:textColor="?attr/colorOnSurface"
                     android:fontFamily="sans-serif-bold" />
                 <ImageButton
                     android:id="@+id/btn_marks_increment"
@@ -139,7 +139,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Difficulty"
-        android:textColor="@color/text_secondary"
+        android:textColor="?attr/colorOnSurfaceVariant"
         android:textSize="12sp"
         android:layout_marginBottom="8dp" />
     <Spinner

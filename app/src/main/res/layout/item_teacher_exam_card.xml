@@ -9,7 +9,7 @@
     android:layout_marginBottom="16dp"
     android:clickable="true"
     android:focusable="true"
-    app:cardBackgroundColor="#F7F8FF"
+    app:cardBackgroundColor="?attr/colorSurfaceVariant"
     app:strokeWidth="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +22,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
-            android:textColor="@color/text_primary"
+            android:textColor="?attr/colorOnSurface"
             android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/tv_exam_code"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,10 +34,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_pill_accent"
-            android:backgroundTint="#D1D6FF"
+            android:backgroundTint="?attr/colorPrimaryContainer"
             android:paddingHorizontal="12dp"
             android:paddingVertical="4dp"
-            android:textColor="#5C6BC0"
+            android:textColor="@color/brand_primary"
             android:textSize="10sp"
             android:fontFamily="sans-serif-medium"
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,14 +58,14 @@
                 android:layout_width="14dp"
                 android:layout_height="14dp"
                 android:src="@drawable/ic_timer"
-                app:tint="@color/text_hint" />
+                app:tint="?attr/colorOnSurfaceVariant" />
 
             <TextView
                 android:id="@+id/tv_timer_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
-                android:textColor="@color/text_hint"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="12sp"
                 tools:text="30 Min Limit" />
         </LinearLayout>
@@ -85,11 +85,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="8dp"
                 android:background="@drawable/bg_pill_rounded"
-                android:backgroundTint="#FFE2D1"
+                android:backgroundTint="?attr/colorSecondaryContainer"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="4dp"
                 android:textAllCaps="true"
-                android:textColor="#FF7043"
+                android:textColor="@color/color_warning"
                 android:textSize="10sp"
                 android:fontFamily="sans-serif-black"
                 tools:text="MANUAL" />
@@ -99,11 +99,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_pill_rounded"
-                android:backgroundTint="#D1FFD7"
+                android:backgroundTint="?attr/colorSuccessContainer"
                 android:paddingHorizontal="10dp"
                 android:paddingVertical="4dp"
                 android:textAllCaps="true"
-                android:textColor="#43A047"
+                android:textColor="@color/color_success"
                 android:textSize="10sp"
                 android:fontFamily="sans-serif-black"
                 tools:text="PUBLISHED" />
@@ -122,7 +122,7 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:src="@drawable/ic_calendar"
-                app:tint="@color/text_hint" />
+                app:tint="?attr/colorOnSurfaceVariant" />
 
             <TextView
                 android:id="@+id/tv_date"
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
                 android:layout_weight="1"
-                android:textColor="@color/text_hint"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="12sp"
                 tools:text="03 July 2026" />
 
@@ -138,14 +138,14 @@
                 android:layout_width="16dp"
                 android:layout_height="16dp"
                 android:src="@drawable/ic_person"
-                app:tint="@color/text_hint" />
+                app:tint="?attr/colorOnSurfaceVariant" />
 
             <TextView
                 android:id="@+id/tv_student_count"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
-                android:textColor="@color/text_hint"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 android:textSize="12sp"
                 tools:text="13 Students" />
         </LinearLayout>

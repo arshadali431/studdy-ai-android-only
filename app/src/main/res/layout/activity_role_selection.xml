@@ -16,16 +16,16 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
-        android:paddingTop="80dp"
-        android:paddingBottom="40dp"
+        android:paddingTop="56dp"
+        android:paddingBottom="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <!-- Gradient background circle behind icon -->
         <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="@dimen/hero_circle"
+            android:layout_height="@dimen/hero_circle"
             android:layout_marginBottom="@dimen/space_xl">
 
             <View
@@ -34,8 +34,8 @@
                 android:background="@drawable/bg_circle_gradient" />
 
             <ImageView
-                android:layout_width="52dp"
-                android:layout_height="52dp"
+                android:layout_width="@dimen/hero_icon"
+                android:layout_height="@dimen/hero_icon"
                 android:layout_gravity="center"
                 android:contentDescription="@string/app_name"
                 android:src="@drawable/ic_book"
@@ -46,7 +46,7 @@
             android:id="@+id/tv_app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="@style/Studdy.TextAppearance.Display"
+            android:textAppearance="@style/Studdy.TextAppearance.DisplayLarge"
             android:letterSpacing="0.05"
             android:text="@string/app_name"
             android:textColor="?attr/colorOnSurface" />
@@ -55,7 +55,7 @@
             android:id="@+id/tv_app_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/space_sm"
+            android:layout_marginTop="@dimen/space_md"
             android:textAppearance="@style/Studdy.TextAppearance.Body"
             android:text="@string/app_subtitle"
             android:textColor="?attr/colorOnSurfaceVariant" />
@@ -67,9 +67,10 @@
         android:id="@+id/tv_choose_role"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="@style/Studdy.TextAppearance.Overline"
+        android:textAppearance="@style/Studdy.TextAppearance.Label"
         android:text="CHOOSE YOUR ROLE"
-        android:textColor="@color/text_hint"
+        android:letterSpacing="0.12"
+        android:textColor="?attr/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/hero_section" />
@@ -80,7 +81,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/page_padding"
-        android:layout_marginTop="@dimen/space_xl"
+        android:layout_marginTop="@dimen/space_xxl"
         android:layout_marginEnd="@dimen/page_padding"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
@@ -96,18 +97,20 @@
             android:layout_marginBottom="@dimen/space_lg"
             android:clickable="true"
             android:focusable="true"
-            app:cardBackgroundColor="?attr/colorSurface">
+            app:cardBackgroundColor="?attr/colorPrimaryContainer"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="1.5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:padding="@dimen/card_padding_large">
+                android:padding="@dimen/space_xxl">
 
                 <!-- Icon container -->
                 <FrameLayout
-                    android:layout_width="56dp"
-                    android:layout_height="56dp">
+                    android:layout_width="64dp"
+                    android:layout_height="64dp">
 
                     <View
                         android:layout_width="match_parent"
@@ -115,8 +118,8 @@
                         android:background="@drawable/bg_circle_primary_light" />
 
                     <ImageView
-                        android:layout_width="@dimen/icon_lg"
-                        android:layout_height="@dimen/icon_lg"
+                        android:layout_width="@dimen/icon_xl"
+                        android:layout_height="@dimen/icon_xl"
                         android:layout_gravity="center"
                         android:contentDescription="@string/role_teacher"
                         android:src="@drawable/ic_school"
@@ -135,8 +138,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/Studdy.TextAppearance.Title"
+                        android:textStyle="bold"
                         android:text="@string/role_teacher"
-                        android:textColor="?attr/colorOnSurface" />
+                        android:textColor="?attr/colorOnPrimaryContainer" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -144,16 +148,16 @@
                         android:layout_marginTop="@dimen/space_xs"
                         android:textAppearance="@style/Studdy.TextAppearance.BodySmall"
                         android:text="@string/role_teacher_desc"
-                        android:textColor="?attr/colorOnSurfaceVariant" />
+                        android:textColor="?attr/colorOnPrimaryContainer" />
                 </LinearLayout>
 
                 <!-- Arrow -->
                 <ImageView
-                    android:layout_width="@dimen/icon_sm"
-                    android:layout_height="@dimen/icon_sm"
+                    android:layout_width="@dimen/icon_md"
+                    android:layout_height="@dimen/icon_md"
                     android:contentDescription="@null"
                     android:src="@drawable/ic_arrow_right"
-                    app:tint="@color/text_hint" />
+                    app:tint="?attr/colorPrimary" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -165,18 +169,20 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:focusable="true"
-            app:cardBackgroundColor="?attr/colorSurface">
+            app:cardBackgroundColor="?attr/colorTertiaryContainer"
+            app:strokeColor="@color/brand_accent"
+            app:strokeWidth="1.5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:padding="@dimen/card_padding_large">
+                android:padding="@dimen/space_xxl">
 
                 <!-- Icon container -->
                 <FrameLayout
-                    android:layout_width="56dp"
-                    android:layout_height="56dp">
+                    android:layout_width="64dp"
+                    android:layout_height="64dp">
 
                     <View
                         android:layout_width="match_parent"
@@ -184,8 +190,8 @@
                         android:background="@drawable/bg_circle_teal_light" />
 
                     <ImageView
-                        android:layout_width="@dimen/icon_lg"
-                        android:layout_height="@dimen/icon_lg"
+                        android:layout_width="@dimen/icon_xl"
+                        android:layout_height="@dimen/icon_xl"
                         android:layout_gravity="center"
                         android:contentDescription="@string/role_student"
                         android:src="@drawable/ic_person"
@@ -204,8 +210,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="@style/Studdy.TextAppearance.Title"
+                        android:textStyle="bold"
                         android:text="@string/role_student"
-                        android:textColor="?attr/colorOnSurface" />
+                        android:textColor="?attr/colorOnTertiaryContainer" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -213,16 +220,16 @@
                         android:layout_marginTop="@dimen/space_xs"
                         android:textAppearance="@style/Studdy.TextAppearance.BodySmall"
                         android:text="@string/role_student_desc"
-                        android:textColor="?attr/colorOnSurfaceVariant" />
+                        android:textColor="?attr/colorOnTertiaryContainer" />
                 </LinearLayout>
 
                 <!-- Arrow -->
                 <ImageView
-                    android:layout_width="@dimen/icon_sm"
-                    android:layout_height="@dimen/icon_sm"
+                    android:layout_width="@dimen/icon_md"
+                    android:layout_height="@dimen/icon_md"
                     android:contentDescription="@null"
                     android:src="@drawable/ic_arrow_right"
-                    app:tint="@color/text_hint" />
+                    app:tint="@color/brand_accent" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -236,7 +243,7 @@
         android:layout_marginBottom="@dimen/space_xxl"
         android:textAppearance="@style/Studdy.TextAppearance.Caption"
         android:text="Powered by Studdy Exam Portal App"
-        android:textColor="@color/text_hint"
+        android:textColor="?attr/colorOnSurfaceVariant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

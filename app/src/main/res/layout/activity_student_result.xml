@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_page"
+    android:background="?attr/colorBackground"
     tools:context=".ui.student.result.StudentResultActivity">
 
     <LinearLayout
@@ -40,8 +40,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:textColor="@color/text_secondary"
-                android:textSize="15sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="?attr/colorOnSurface"
+                android:textSize="18sp"
                 tools:text="Physics Midterm Quiz" />
 
             <!-- Circular Score Card (Visible if instant score is enabled) -->
@@ -77,7 +78,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-medium"
-                        android:textColor="@color/brand_primary_darker"
+                        android:textColor="?attr/colorPrimary"
                         android:textSize="44sp"
                         tools:text="12" />
 
@@ -86,7 +87,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="out of 15"
-                        android:textColor="@color/text_hint"
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:textSize="14sp" />
                 </LinearLayout>
             </FrameLayout>
@@ -121,7 +122,7 @@
                         android:layout_marginTop="16dp"
                         android:fontFamily="sans-serif-medium"
                         android:text="Evaluation Pending"
-                        android:textColor="@color/text_primary"
+                        android:textColor="?attr/colorOnSurface"
                         android:textSize="18sp" />
 
                     <TextView
@@ -130,7 +131,7 @@
                         android:layout_marginTop="8dp"
                         android:gravity="center"
                         android:text="@string/result_pending"
-                        android:textColor="@color/text_secondary"
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:textSize="14sp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
@@ -159,7 +160,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Student Name"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="?attr/colorOnSurfaceVariant"
                             android:textSize="14sp" />
 
                         <TextView
@@ -167,7 +168,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/text_primary"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="14sp"
                             tools:text="Arshad Ali" />
                     </LinearLayout>
@@ -177,7 +178,7 @@
                         android:layout_height="1dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
-                        android:background="@color/divider" />
+                        android:background="?attr/colorOutline" />
 
                     <!-- Enrollment Row -->
                     <LinearLayout
@@ -190,7 +191,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Enrollment Number"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="?attr/colorOnSurfaceVariant"
                             android:textSize="14sp" />
 
                         <TextView
@@ -198,7 +199,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="sans-serif-medium"
-                            android:textColor="@color/text_primary"
+                            android:textColor="?attr/colorOnSurface"
                             android:textSize="14sp"
                             tools:text="2405112070013" />
                     </LinearLayout>
@@ -208,7 +209,7 @@
                         android:layout_height="1dp"
                         android:layout_marginTop="12dp"
                         android:layout_marginBottom="12dp"
-                        android:background="@color/divider" />
+                        android:background="?attr/colorOutline" />
 
                     <!-- Proctor Warnings telemetry -->
                     <LinearLayout
@@ -221,7 +222,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="Proctoring Violations"
-                            android:textColor="@color/text_secondary"
+                            android:textColor="?attr/colorOnSurfaceVariant"
                             android:textSize="14sp" />
 
                         <TextView
@@ -250,7 +251,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Questions Breakdown"
-                    android:textColor="@color/text_primary"
+                    android:textColor="?attr/colorOnSurface"
                     android:textSize="18sp"
                     android:fontFamily="sans-serif-medium"
                     android:layout_marginBottom="16dp" />

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_page">
+    android:background="?attr/colorBackground">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -70,7 +70,7 @@
                                 android:id="@+id/tv_exam_title"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="22sp"
                                 android:textStyle="bold"
                                 android:layout_marginBottom="8dp"
@@ -80,7 +80,7 @@
                                 android:id="@+id/tv_exam_code"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:textColor="@color/text_secondary"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="14sp"
                                 android:layout_marginBottom="16dp"
                                 tools:text="Code: IZ2Q9U" />
@@ -88,7 +88,7 @@
                             <View
                                 android:layout_width="match_parent"
                                 android:layout_height="1dp"
-                                android:background="@color/divider"
+                                android:background="?attr/colorOutline"
                                 android:layout_marginBottom="16dp" />
 
                             <!-- Details Row -->
@@ -109,14 +109,14 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Questions"
-                                        android:textColor="@color/text_secondary"
+                                        android:textColor="?attr/colorOnSurfaceVariant"
                                         android:textSize="12sp" />
 
                                     <TextView
                                         android:id="@+id/tv_question_count"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:textColor="@color/text_primary"
+                                        android:textColor="?attr/colorOnSurface"
                                         android:textSize="18sp"
                                         android:textStyle="bold"
                                         android:layout_marginTop="4dp"
@@ -134,14 +134,14 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Duration"
-                                        android:textColor="@color/text_secondary"
+                                        android:textColor="?attr/colorOnSurfaceVariant"
                                         android:textSize="12sp" />
 
                                     <TextView
                                         android:id="@+id/tv_duration"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:textColor="@color/text_primary"
+                                        android:textColor="?attr/colorOnSurface"
                                         android:textSize="18sp"
                                         android:textStyle="bold"
                                         android:layout_marginTop="4dp"
@@ -159,14 +159,14 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:text="Total Marks"
-                                        android:textColor="@color/text_secondary"
+                                        android:textColor="?attr/colorOnSurfaceVariant"
                                         android:textSize="12sp" />
 
                                     <TextView
                                         android:id="@+id/tv_total_marks"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:textColor="@color/text_primary"
+                                        android:textColor="?attr/colorOnSurface"
                                         android:textSize="18sp"
                                         android:textStyle="bold"
                                         android:layout_marginTop="4dp"
@@ -196,7 +196,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="Instructions &amp; Rules"
-                                android:textColor="@color/text_primary"
+                                android:textColor="?attr/colorOnSurface"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
                                 android:layout_marginBottom="12dp" />
@@ -205,7 +205,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="• Ensure you have a stable internet connection before beginning."
-                                android:textColor="@color/text_secondary"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="14sp"
                                 android:layout_marginBottom="8dp" />
 
@@ -214,7 +214,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="• Camera permission and proctoring is enabled. Your face must remain visible at all times."
-                                android:textColor="@color/text_secondary"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="14sp"
                                 android:layout_marginBottom="8dp"
                                 android:visibility="gone"
@@ -224,7 +224,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="• App-switching is monitored. Do not switch tabs, open other applications, or press home/recents."
-                                android:textColor="@color/text_secondary"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="14sp"
                                 android:layout_marginBottom="8dp" />
 
@@ -232,7 +232,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="• Screen pinning / lock-task mode will engage to lock you into the exam activity."
-                                android:textColor="@color/text_secondary"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="14sp"
                                 android:layout_marginBottom="8dp" />
 
@@ -240,7 +240,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="• Please answer honestly and complete the exam independently."
-                                android:textColor="@color/text_secondary"
+                                android:textColor="?attr/colorOnSurfaceVariant"
                                 android:textSize="14sp" />
                         </LinearLayout>
                     </com.google.android.material.card.MaterialCardView>

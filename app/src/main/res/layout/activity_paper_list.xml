@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg_page"
+    android:background="?attr/colorBackground"
     tools:context=".ui.teacher.papers.PaperListActivity">
 
     <LinearLayout
@@ -65,7 +65,7 @@
                         android:layout_height="72dp"
                         android:contentDescription="@null"
                         android:src="@drawable/ic_book"
-                        app:tint="@color/text_hint" />
+                        app:tint="?attr/colorOnSurfaceVariant" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -73,7 +73,7 @@
                         android:layout_marginTop="16dp"
                         android:gravity="center"
                         android:text="No printable papers found."
-                        android:textColor="@color/text_secondary"
+                        android:textColor="?attr/colorOnSurfaceVariant"
                         android:textSize="15sp" />
                 </LinearLayout>
 

@@ -20,9 +20,9 @@
             android:background="@drawable/bg_student_header_gradient"
             android:orientation="vertical"
             android:paddingStart="@dimen/page_padding"
-            android:paddingTop="@dimen/space_lg"
+            android:paddingTop="@dimen/space_xl"
             android:paddingEnd="@dimen/page_padding"
-            android:paddingBottom="@dimen/space_xxl">
+            android:paddingBottom="@dimen/space_xxxl">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -40,7 +40,7 @@
                         android:id="@+id/tv_student_greeting"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/Studdy.TextAppearance.Headline"
+                        android:textAppearance="@style/Studdy.TextAppearance.HeadlineLarge"
                         android:text="Hello, Student"
                         android:textColor="@color/white" />
 
@@ -91,20 +91,21 @@
             android:layout_marginBottom="@dimen/space_sm"
             android:clickable="true"
             android:focusable="true"
-            app:cardBackgroundColor="?attr/colorPrimaryContainer">
+            app:cardBackgroundColor="@color/brand_primary"
+            app:strokeWidth="0dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="@dimen/card_padding">
+                android:padding="@dimen/card_padding_large">
 
                 <ImageView
                     android:layout_width="@dimen/icon_xl"
                     android:layout_height="@dimen/icon_xl"
                     android:src="@drawable/ic_trophy"
-                    app:tint="?attr/colorOnPrimaryContainer" />
+                    app:tint="@color/white" />
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -116,9 +117,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="@style/Studdy.TextAppearance.TitleSmall"
+                        android:textAppearance="@style/Studdy.TextAppearance.Title"
+                            android:textStyle="bold"
                         android:text="My Results"
-                        android:textColor="?attr/colorOnPrimaryContainer" />
+                        android:textColor="@color/white" />
 
                     <TextView
                         android:id="@+id/tv_completed_count"
@@ -127,7 +129,7 @@
                         android:layout_marginTop="@dimen/space_xs"
                         android:textAppearance="@style/Studdy.TextAppearance.BodySmall"
                         android:text="0 exams completed"
-                        android:textColor="?attr/colorOnPrimaryContainer" />
+                        android:textColor="@color/white" />
                 </LinearLayout>
 
                 <ImageView
@@ -135,7 +137,7 @@
                     android:layout_height="@dimen/icon_sm"
                     android:contentDescription="@null"
                     android:src="@drawable/ic_arrow_right"
-                    app:tint="?attr/colorOnPrimaryContainer" />
+                    app:tint="@color/white" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
@@ -146,6 +148,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorSurface"
+            app:tabTextColor="?attr/colorOnSurfaceVariant"
+            app:tabSelectedTextColor="?attr/colorPrimary"
+            app:tabIndicatorColor="?attr/colorPrimary"
             app:tabGravity="fill"
             app:tabMode="fixed">
 
@@ -176,7 +181,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textAppearance="@style/Studdy.TextAppearance.TitleSmall"
+                android:textAppearance="@style/Studdy.TextAppearance.Title"
+                            android:textStyle="bold"
                 android:text="Available Exams"
                 android:textColor="?attr/colorOnSurface" />
 
@@ -187,6 +193,12 @@
                 android:src="@drawable/ic_filter"
                 app:tint="?attr/colorOnSurface" />
         </LinearLayout>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_marginStart="@dimen/page_padding_sm"
+            android:background="@color/brand_secondary" />
 
         <!-- SwipeRefreshLayout and Recycler -->
         <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -225,7 +237,7 @@
                         android:layout_height="72dp"
                         android:contentDescription="@null"
                         android:src="@drawable/ic_book"
-                        app:tint="@color/text_hint" />
+                        app:tint="?attr/colorOnSurfaceVariant" />
 
                     <TextView
                         android:id="@+id/tv_empty_state"

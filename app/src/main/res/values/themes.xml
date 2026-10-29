@@ -13,6 +13,10 @@
         <item name="colorOnSecondary">@color/text_on_secondary</item>
         <item name="colorSecondaryContainer">@color/brand_secondary_light</item>
         <item name="colorTertiary">@color/brand_accent</item>
+        <item name="colorTertiaryContainer">@color/brand_teal_surface</item>
+        <item name="colorOnTertiaryContainer">@color/brand_teal_dark</item>
+        <item name="colorSuccessContainer">@color/color_success_light</item>
+        <item name="colorOnSuccessContainer">@color/color_success</item>
         <item name="colorError">@color/color_error</item>
         <item name="colorErrorContainer">@color/color_error_light</item>
         <item name="android:colorBackground">@color/bg_page</item>
@@ -39,10 +43,10 @@
     <!--  TOOLBAR STYLES                                                     -->
     <!-- ════════════════════════════════════════════════════════════════════ -->
     <style name="Studdy.Toolbar" parent="Widget.Material3.Toolbar">
-        <item name="android:background">@color/bg_card</item>
-        <item name="titleTextColor">@color/text_primary</item>
-        <item name="subtitleTextColor">@color/text_secondary</item>
-        <item name="navigationIconTint">@color/text_primary</item>
+        <item name="android:background">?attr/colorSurface</item>
+        <item name="titleTextColor">?attr/colorOnSurface</item>
+        <item name="subtitleTextColor">?attr/colorOnSurfaceVariant</item>
+        <item name="navigationIconTint">?attr/colorOnSurface</item>
         <item name="android:theme">@style/ThemeOverlay.Material3.ActionBar</item>
     </style>
 
@@ -94,7 +98,7 @@
         <item name="boxCornerRadiusTopEnd">12dp</item>
         <item name="boxCornerRadiusBottomStart">12dp</item>
         <item name="boxCornerRadiusBottomEnd">12dp</item>
-        <item name="boxStrokeColor">@color/stroke_light</item>
+        <item name="boxStrokeColor">?attr/colorOutline</item>
         <item name="boxStrokeWidth">1.5dp</item>
         <item name="hintTextColor">@color/brand_primary</item>
         <item name="android:fontFamily">sans-serif</item>
@@ -106,17 +110,17 @@
     <style name="Studdy.Card" parent="Widget.Material3.CardView.Elevated">
         <item name="cardElevation">3dp</item>
         <item name="cardCornerRadius">16dp</item>
-        <item name="cardBackgroundColor">@color/bg_card</item>
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
         <item name="contentPadding">0dp</item>
-        <item name="strokeColor">@color/divider</item>
+        <item name="strokeColor">?attr/colorOutline</item>
         <item name="strokeWidth">0.5dp</item>
     </style>
 
     <style name="Studdy.Card.Flat" parent="Widget.Material3.CardView.Outlined">
         <item name="cardElevation">0dp</item>
         <item name="cardCornerRadius">16dp</item>
-        <item name="cardBackgroundColor">@color/bg_card</item>
-        <item name="strokeColor">@color/divider</item>
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
+        <item name="strokeColor">?attr/colorOutline</item>
         <item name="strokeWidth">1dp</item>
     </style>
 
@@ -174,6 +178,18 @@
         <item name="android:letterSpacing">0.08</item>
     </style>
 
+    <style name="Studdy.TextAppearance.DisplayLarge" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="android:textSize">36sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Studdy.TextAppearance.HeadlineLarge" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">26sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 
     <!-- ════════════════════════════════════════════════════════════════════ -->
     <!--  DIALOG STYLE                                                       -->
@@ -216,7 +232,7 @@
 
     <style name="Studdy.BottomSheet" parent="Widget.Material3.BottomSheet">
         <item name="shapeAppearanceOverlay">@style/Studdy.BottomSheet.Shape</item>
-        <item name="backgroundTint">@color/white</item>
+        <item name="backgroundTint">?attr/colorSurface</item>
     </style>
 
     <style name="Studdy.BottomSheet.Shape" parent="">
